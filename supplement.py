@@ -1,13 +1,12 @@
 import csv
 
-def parseAssignmentAndExam():
-    file_path = './newScore.txt'
+def parseAssignmentAndExam(file_path):
     with open(file_path, 'r') as file:
         data = file.readlines()
     
     with open("newUser_data.csv", 'w', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
-        csv_writer.writerow(["name", "Highest C Piscine", "Final exam score", "Number of group assignments"])
+        csv_writer.writerow(["login", "Highest C Piscine", "Final exam score", "Number of group assignments"])
             
         user_blocks = []
         current_block = []

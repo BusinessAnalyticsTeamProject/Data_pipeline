@@ -7,7 +7,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.keys import Keys
-from supplement import makeNameList, remove_name_from_file
 from selenium.webdriver.chrome.options import Options
 
 import time
@@ -44,6 +43,7 @@ def login_and_process_users(id, pw, name_list):
     # get the result of pass exam.
     with open("pass.csv", 'a', newline='') as csvfile:
         csv_writer = csv.writer(csvfile)
+        csv_writer.writerow(["login", "Pass"])
         for name in name_list:
             # Search for the user
             try:
@@ -90,4 +90,4 @@ def login_and_process_users(id, pw, name_list):
             except Exception as e:
                 print(f"An error occurred for {name}: {e}")
     driver.quit()
-    return "pass"
+    return "pass.csv"

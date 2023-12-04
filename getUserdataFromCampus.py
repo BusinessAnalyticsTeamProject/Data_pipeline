@@ -135,8 +135,8 @@ def read_user_data_from_csv(csv_file, column_number):
 
 
 
-get_all_users_by_campus()
-user_ids = read_user_data_from_csv("./user_data_campus_1.csv", 0)
-for user_id in user_ids:
-    result_correct = process_user(user_id)
-    append_to_csv(result_correct, "./user_feedback_data_campus_1.csv")
+# get_all_users_by_campus()
+# user_ids = read_user_data_from_csv("./user_data_campus_1.csv", 0)
+# for user_id in user_ids:
+#     result_correct = process_user(user_id)
+#     append_to_csv(result_correct, "./user_feedback_data_campus_1.csv")
